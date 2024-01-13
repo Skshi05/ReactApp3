@@ -8,7 +8,7 @@ export default function ActivityGen() {
         let response = await fetch(url);
         let data = await response.json();
        // console.log(data)
-        setActivity(prevactivity => [...prevactivity,currActivity]);
+        setActivity(prevactivity => [...prevactivity,{activity:currActivity, id:Date.now()}]);
        //setActivity(prevactivity => prevactivity.concat(currActivity));
         setCurrActivity(data.activity)
       
@@ -25,8 +25,8 @@ export default function ActivityGen() {
     <div className="activities-container">
         <ul className="activity-list">
           <li className="current-activity">{currActivity}</li>
-          {activity.map((activity) => (
-            <li className="activity">{activity}</li>
+          {activity.map((activityItem) => (
+            <li key ={activityItem.id} className="activity">{activityItem.activity}</li>
           ))}
         </ul>
       </div>
