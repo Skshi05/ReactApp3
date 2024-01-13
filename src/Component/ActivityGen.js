@@ -8,10 +8,10 @@ export default function ActivityGen() {
         let response = await fetch(url);
         let data = await response.json();
        // console.log(data)
-       // setActivity(prevactivity => [...prevactivity,currActivity]);
-       setActivity(prevactivity => prevactivity.concat(currActivity));
+        setActivity(prevactivity => [...prevactivity,currActivity]);
+       //setActivity(prevactivity => prevactivity.concat(currActivity));
         setCurrActivity(data.activity)
-       console.log(setActivity)
+      
     }
     
     
@@ -22,15 +22,13 @@ export default function ActivityGen() {
       <div className="btn">
       <button onClick={Getapi}>Generate Activity</button>
     </div>
-    <div className='activities-container'>
-        <p className="current-activity">{currActivity}</p>
+    <div className="activities-container">
         <ul className="activity-list">
-          {
-            activity.map((activity)=>(
-             <li>{activity}</li> 
-            ))
-          }
-          </ul>
+          <li className="current-activity">{currActivity}</li>
+          {activity.map((activity) => (
+            <li className="activity">{activity}</li>
+          ))}
+        </ul>
       </div>
       </div>
     </>

@@ -1,32 +1,28 @@
+/* ActivityGen.css */
 
-
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .btn {
-  padding: 10px 20px;
-  font-size: 20px;
-    margin-bottom: 20px;
-  }
-.activities-container {
-  text-align:center;
-}
-
-.activity-list li {
-  margin-bottom: 10px;
+.container {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  padding: 20px;
 }
 
-.activity{
-  margin-bottom: 10px;
+.btn {
+  margin-bottom: 20px;
 }
 
+
+
+.activity-list {
+  list-style: disc;
+  padding: 0;
+}
+.current-activity{
+  list-style: none;
+}
+.activity-list li {
+  margin-bottom: 30px;
+}
 
 
 
