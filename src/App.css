@@ -1,4 +1,3 @@
-/* ActivityGen.css */
 
 .container {
   display: flex;
@@ -13,15 +12,12 @@
 
 
 
-.activity-list {
-  list-style: disc;
-  padding: 0;
-}
-.current-activity{
-  list-style: none;
-}
-.activity-list li {
+.activity {
   margin-bottom: 30px;
+}
+
+.expbtn {
+  margin-left: 10px;
 }
 
 
